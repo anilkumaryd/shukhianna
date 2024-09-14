@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Shukhianna Shop</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"> 
+   
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<!-- font awesome for icon -->
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      </head>
+
+
+
+
+<!-- Bootstrap CSS -->
+ 
+  <style>
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: green; /* Change the color to red */
+    }
+  </style>
+<!-- {% block content %}
+{% endblock %} -->
+<body>
+    <nav class="navbar navbar-expand-lg navbar-success bg-success mb-1 sticky-lg-top">
+        <div class="container-fluid">
+          <img class="navbar-brand text-light" src="{% static 'images/logo.png' %}" style="width: 70px;" alt="Girl in a jacket">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <i class="bi bi-list text-light"> Login</i>
+
+           <span class="navbar-toggler-icon text-light"></span> 
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
+              </li>
+              <!-- pages add -->
+              <li class="nav-item">
+                <a class="nav-link text-light"  href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light"  href="/product/all/all/">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light"  href="#">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light"  href="#">Contact</a>
+              </li>
+           
+           
+             
+
+              <li class="nav-item dropdown">
+                <!-- <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                 <i class="fa fa-newspaper-o"></i> Shop by Category
+                </a> -->
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                   Shop by Category
+                 </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   
+                  
+                  <li><a class="dropdown-item" href="/product/all/all/">Product</a></li>
+                  
+                  <li><a class="dropdown-item" href="/OrganicSpices/all/all/">Organic Spices</a></li>
+
+                  <li><a class="dropdown-item" href="/NewOrganicMasala/all/all/">New Organic Masala</a></li>
+                  <li><a class="dropdown-item" href="/PulsesFlour/all/all/">Pulses & Flour</a></li>
+                  <li><a class="dropdown-item" href="/OrganicMisc/all/all/">Organic Misc</a></li>
+                  <li><a class="dropdown-item" href="/OrganicsOil/all/all/">Organic Oil</a></li>
+                </ul>
+              </li>
+             
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light text-light" type="submit">Search</button>
+            </form>
+
+
+      <!-- login -->
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Anil kumar
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </nav>
+
+
+     
+
+      
+
+
+
+      <!-- cusoruel add -->
+
+      <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/banner_1.jpg' %}"  class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/banner_2.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/banner_3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden" >Next</span>
+        </button>
+      </div> -->
+
+       <!-- I don't carouse on each page -->
+
+     {% block body %}
+       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/banner_1.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banner_2.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/banner_3.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+  <!-- add product section -->
+   <div class="container-fluid bg-success text-light p-1 text-center mt-1">
+    <h1>Product Section</h1>
+   </div>
+   
+
+   <h3 class="text-400 ptopbot20 clearfix pleftright15 mtopbot0 bg-white">
+    <span class="pull-left text-x-lg product-landing-category-label landing-category-text heading-box-shadow text-capitalize mleft-15 pleftright15 rounded-corners-top-right rounded-corners-bottom-right ng-binding">
+        Organic Spices
+    </span>
+  </h3>
+   <div class="container-fluid mt-1">
+    <div class="row">
+      <!-- Column setup for 4 cards in a row on large screens -->
+      {% for img_backend in img_data_value %}
+      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+        
+        <div class="card" style="width: 20rem;">
+          <img src={{img_backend.pic1.url}} class="card-img-top" style="height: 250px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{img_backend.name}}</h5>
+            <p class="card-text"><strike>$&nbsp;&nbsp;{{img_backend.baseprice}}</strike>&nbsp;&nbsp;&nbsp;${{img_backend.finalPrice}}</p>
+            <p class="card-text">{{img_backend.discription}}</p>
+            <a href="#" class="btn btn-success w-100">Add to Cart</a>
+          </div> 
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div> 
+  {% endblock %}
+  
+   
+
+
+
+   <footer class="bg-success text-light p-1 text-center mt-1">
+    <p>&copy; 2024 sukhianna.com. All rights reserved. All trademarks are the property of their respective owners.</p>
+        <form class="d-flex w-50" style="margin-left: 25%;">
+              <input class="form-control me-2" type="text" placeholder="Enter email ID  to subscribe for new product launch" aria-label="Search">
+              <button class="btn btn-outline-light text-light" type="submit">Submit</button>
+            </form>
+    </footer>
+   </div>
+  
+</body>
+
+</html>

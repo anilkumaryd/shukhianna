@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<title>Shukhianna Shop</title>
+{% endblock %}
+
+{% block body %}
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+        </div>
+
+    <!-- add to cards on right side -->
+        <!-- <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-6 col-xs-12">
+            
+
+            <div class="row">
+                {% for img_backend in img_data_value %}
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  
+                  <div class="card" style="width: 20rem;">
+                    <img src={{img_backend.pic1.url}} class="card-img-top" style="height: 250px;" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{img_backend.name}}</h5>
+                      <p class="card-text"><strike>$&nbsp;&nbsp;{{img_backend.baseprice}}</strike>&nbsp;&nbsp;&nbsp;${{img_backend.finalPrice}}</p>
+                      <p class="card-text">{{img_backend.discription}}</p>
+                      <a href="#" class="btn btn-success w-100">Add to Cart</a>
+                    </div> 
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div> -->
+
+        <div class="row">
+          <!-- Column setup for 4 cards in a row on large screens -->
+          {% for img_backend in img_data_value %}
+          <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            
+            <div class="card" style="width: 20rem;">
+              <img src={{img_backend.pic1.url}} class="card-img-top" style="height: 250px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{img_backend.name}}</h5>
+                <p class="card-text"><strike>$&nbsp;&nbsp;{{img_backend.baseprice}}</strike>&nbsp;&nbsp;&nbsp;${{img_backend.finalPrice}}</p>
+                <p class="card-text">{{img_backend.discription}}</p>
+                <a href="#" class="btn btn-success w-100">Add to Cart</a>
+              </div> 
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+
+
+    </div>
+ </div>
+{% endblock %}
