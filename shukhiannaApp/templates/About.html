@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<title>Shukhianna Shop</title>
+{% endblock %}
+
+{% block body %}
+ 
+<div class="col-xs-12 pleftright0">
+    <div class="pad15 border-all mtopbot50 rounded-corners bg-white border-gray" ng-class="{'bg-white border-gray': !$root.ENV.enableDarkMode,
+                'bg-white-5 border-rich-dark': $root.ENV.enableDarkMode}">
+        <h3 class="text-400 mtop10 mbot25 ptopbot5 clearfix mleftright0">
+        <span class="text-x-lg bg-success text-white
+                heading-box-shadow text-capitalize pad10 cursor-default
+                rounded-corners-top-right rounded-corners-bottom-right">
+            About us
+        </span>
+        </h3>
+
+        <div class="row mleftright0">
+            <div class="col-sm-8 about-content pleftright0">
+                <ul class="list-unstyled list-group overflow-hidden">
+                    <li class="list-group-item pad15" ng-class="{'bg-black-25 border-lush-black': $root.ENV.enableDarkMode}">
+                        {% comment %} <img ng-src="{% static 'images/banner_1.jpg' %}" class="img-responsive" alt="Sukhianna" src="../images/client-assets/ska/products/lentils.jpg"> {% endcomment %}
+                        <img src="{% static 'images/banner_3.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
+                    </li>
+                    <!-- ngRepeat: section in ENV.aboutUs.sections --><li class="pad20 list-group-item ng-scope" ng-class="{'bg-black-25 border-lush-black': $root.ENV.enableDarkMode}" ng-repeat="section in ENV.aboutUs.sections">
+                        <p class="bg-success border-0 text-light text-center p-2 w-100">
+                            Sukhianna - You Need It, We Provide It!
+                        </p>
+                        <p class="list-group-item-text text-400 ng-binding" ng-class="{'text-gray': $root.ENV.enableDarkMode}" ng-bind-html="section.description | trusted">We are one of the USA’s leading wholesale distributors of organic and natural foods. We have a firm commitment to promoting organic Jeevan, and have been at the forefront of introducing organic choice to the South East Asian consumers in the US. All our Sukhianna organic products are certified by the FDA &amp; USDA. Our ever expanding range of organic products includes Spices, Pulses, Flour &amp; Rice. As part of our support for organic movement we have been at the forefront of the campaign to educate consumers about the benefits of organic food and farming.</p>
+                    </li><!-- end ngRepeat: section in ENV.aboutUs.sections --><li class="pad20 list-group-item ng-scope" ng-class="{'bg-black-25 border-lush-black': $root.ENV.enableDarkMode}" ng-repeat="section in ENV.aboutUs.sections">
+                        <p class="bg-success border-0 text-light text-center p-2 w-100">
+                            Where Can You Find Sukhianna?
+                        </p>
+                        <p class="list-group-item-text text-400 ng-binding" ng-class="{'text-gray': $root.ENV.enableDarkMode}" ng-bind-html="section.description | trusted">Our products are available at the most leading Indian grocery stores in the United States. Please <a href="/contact">Contact Us</a> if you are looking for more information on how to get Sukhianna products.</p>
+                    </li><!-- end ngRepeat: section in ENV.aboutUs.sections -->
+                </ul>
+            </div>
+
+            <div class="col-sm-4" ng-class="{'pleftright0': $root.screenWidth.xs}">
+                <div class="pad20 rounded-corners border-all bg-light-gray border-gray" ng-class="{'bg-light-gray border-gray': !$root.ENV.enableDarkMode,
+                'bg-black-25 border-lush-black': $root.ENV.enableDarkMode}">
+                    <ul class="list-unstyled list-group overflow-hidden mbot0">
+                        <li class="pad10" ng-hide="location.contactData.isVirtual">
+                            <p class="mtop0 mbot5 text-small text-secondary text-700 ng-binding">
+                                Fremont Location
+                            </p>
+                            <p class="mtopbot0 text-small ng-binding text-dark-gray" ng-class="{'text-dark-gray': !$root.ENV.enableDarkMode,
+                                'text-gray': $root.ENV.enableDarkMode}">
+                                38507 Cherry St, Newark, CA 94560
+                            </p>
+                        </li>
+                        <li class="pad10">
+                            <p class="mtop0 mbot5 text-small text-secondary text-700">
+                                Phone
+                            </p>
+                            <p class="mtopbot0 text-small ng-binding text-dark-gray" ng-class="{'text-dark-gray': !$root.ENV.enableDarkMode,
+                                'text-gray': $root.ENV.enableDarkMode}">
+                                (858) 222-7561
+                            </p>
+                        </li>
+                        <li class="pad10">
+                            <p class="mtop0 mbot5 text-small text-secondary text-700">
+                                Email
+                            </p>
+                            <p class="mtopbot0 text-small ng-binding text-dark-gray" ng-class="{'text-dark-gray': !$root.ENV.enableDarkMode,
+                                'text-gray': $root.ENV.enableDarkMode}">
+                                info@sukhianna.com
+                            </p>
+                        </li>
+                        <!-- ngIf: location.contactData.operatingHours --><li class="pad10 ng-scope" ng-hide="location.contactData.isVirtual" ng-if="location.contactData.operatingHours">
+                            <p class="mtop0 mbot5 text-small text-secondary text-700">
+                                Hours
+                            </p>
+                            <!-- ngRepeat: item in location.contactData.operatingHours -->
+                        </li><!-- end ngIf: location.contactData.operatingHours -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
