@@ -32,4 +32,8 @@ urlpatterns = [
     path('PulsesFlour/<str:mc>/<str:sc>/',views.OrganicSpices),
     path('OrganicMisc/<str:mc>/<str:sc>/',views.OrganicMisc),
     path('OrganicsOil/<str:mc>/<str:sc>/',views.OrganicsOil),
+    path('contact/',views.contactpage),
+    path('terms_and_conditons/',views.Termspage),
+    path('privacy_policy/',views.Privacypage),
+    path('About/',views.Aboutpage),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

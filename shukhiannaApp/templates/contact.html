@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<title>Shukhianna Shop | Contact Page</title>
+{% endblock %}
+{% block body %}
+ 
+
+<div class="container-fluid my-2">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="bg-success text-light text-center mb-2 p-2">
+               Email: info@sukhianna.com
+            </div>
+            <div class="bg-success text-light text-center mb-2 p-2">
+                Phone: (858) 222-7561
+            </div>
+            <div class="bg-success text-light text-center mb-2 p-2">
+                Fremont Location:   38507 Cherry St, Newark, CA 94560
+            </div>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="100%" height="480px" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=38507%20Cherry%20St,%20Newark,%20CA%2094560,%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            </div>
+
+            
+        </div>
+        <div class="col-md-6 col-12">
+            <h5 class="bg-success text-light text-center p-2">Contact Page</h5>
+            {% for i in messages %}
+            <div class="alert alert-success text-center alert-dismissible fade show" role="alert">
+                {{i}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" required name="name" class="form-control" placeholder="Enter Your Name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" required name="email" class="form-control" placeholder="Enter Your Email Address">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" required name="phone" class="form-control" placeholder="Enter Your Phone number">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subject</label>
+                    <input type="text" required name="subject" class="form-control" placeholder="Enter Your Subject">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea required name="message" rows="5" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="bg-success border-0 text-light text-center p-2 w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

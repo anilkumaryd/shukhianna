@@ -42,6 +42,21 @@ class Product(models.Model):
 
     def __str__(self):
         return str(self.id)+" "+self.name
+    
+
+conatctstatus = ((0,"Active"),(1,"Done"))
+class Contact(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    phone = models.CharField(max_length=15)
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
+    status = models.IntegerField(choices=conatctstatus,default=0)
+    date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return str(self.id)+" "+self.name+" "+self.subject
 
 
 

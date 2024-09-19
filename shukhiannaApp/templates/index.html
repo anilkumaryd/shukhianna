@@ -53,17 +53,21 @@
               </li>
               <!-- pages add -->
               <li class="nav-item">
-                <a class="nav-link text-light"  href="#">About</a>
+                <a class="nav-link text-light"  href="/About/">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light"  href="/contact/">Contact</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light"  href="/product/all/all/">Product</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light"  href="#">Cart</a>
+                <a class="nav-link text-light"  href="/terms_and_conditons/">Terms</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light"  href="#">Contact</a>
+                <a class="nav-link text-light"  href="/privacy_policy/">Privacy Policy</a>
               </li>
+              
            
            
              
@@ -99,13 +103,13 @@
       <!-- login -->
             <div class="dropdown">
               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Anil kumar
+              Login
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              {% comment %} <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+              </ul> {% endcomment %}
             </div>
 
 
@@ -161,7 +165,7 @@
         <img src="{% static 'images/banner_2.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/banner_3.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
+        <img src="{% static 'images/about.jpg' %}" width="100%" height="500px" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
