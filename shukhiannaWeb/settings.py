@@ -30,7 +30,7 @@ DEBUG = True
 #ALLOWED_HOSTS = []
 
 #35.200.203.6 ip address of vm of google cloud
-ALLOWED_HOSTS = ['35.200.203.6']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
