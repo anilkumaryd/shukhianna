@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-q6kh90-!9=s6x3k=nhap!$p24(ld#ev7b!+1+(dd!1lqe^#ha!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+
+#35.200.203.6 ip address of vm of google cloud
+ALLOWED_HOSTS = ['ALLOWED_HOSTS = []']
 
 
 # Application definition
