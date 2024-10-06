@@ -4,7 +4,7 @@ from django.contrib import messages
 from . models import *
 
 
-# Create your views function base here.
+# Create your  views function base here.
 def home(request):
     img_data=Product.objects.all()
     img_data=img_data[::-1] ## use for latest product add on
