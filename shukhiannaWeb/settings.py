@@ -30,7 +30,7 @@ DEBUG = True
 #ALLOWED_HOSTS = []
 
 #35.200.203.6 ip address of vm of google cloud
-ALLOWED_HOSTS = ['sukhianna.com','www.sukhianna.com']
+ALLOWED_HOSTS = ['sukhianna.com','www.sukhianna.com','13.126.252.46']
 
 
 
